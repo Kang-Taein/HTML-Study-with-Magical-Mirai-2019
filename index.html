@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>マジカルミライ - MAIN</title>
+    <meta charset="utf-8">
+    <script>
+    var Links = {
+      setColor : function(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = color;
+             i = i+1;
+           }
+        }
+    }
+    var Body = {
+      setColor : function(color){
+        document.querySelector('body').style.color = color;
+      },
+      setBackgroundColor : function(color){
+        document.querySelector('body').style.backgroundColor = color;
+      }
+
+    }
+
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+        Body.setBackgroundColor('black');
+        Body.setColor('white');
+        self.value = 'day';
+        Links.setColor('powderblue');
+          }
+      else{
+        Body.setBackgroundColor('white');
+        Body.setColor('black');
+        self.value = 'night';
+        Links.setColor('blue');
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <h1><a href="index.html" class="style">マジカルミライ</a></h1>
+    <input type="button" value="night" onclick="nightDayHandler(this);">
+    <h2>MENU</h2>
+      <script>
+        var hotLinks = ['INFO', 'OSAKA', 'TOKYO', 'SPECIAL', 'GOODS', 'whatismiku'];
+      </script>
+      <ul>
+        <script>
+          var i = 0;
+          while(i < hotLinks.length){
+            document.write('<li><a href = "/*여기에 주소를 넣으시오 */">'+hotLinks[i]+'</a></li>');
+            i = i+1;
+          }
+        </script>
+
+      </ul>
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/a-Nf3QUFkOU"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        </p>
+        <p><h2><a href="https://magicalmirai.com/2019/" target="_blank" title="初音ミク">マジカルミライ2019</a></h2>
+        <strong>Welcome to Hatsune Miku "Magical Mirai 2019" !
+                <br>初音ミク「マジカルミライ 2019」へようこそ！</strong><br>
+        未来へ無限に繋がっていく「初音ミク」の創作文化を体感できる、ライブと企画展を併催したイベントです！<br>
+        昨年の動員数は40,000人以上。7年目となる2019年は、東京と大阪の2会場で開催！<br>
+        『フューチャーサーカス』をテーマに展開します！</p>
+  </body>
+</html>
